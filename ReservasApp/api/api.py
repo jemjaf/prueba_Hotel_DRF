@@ -10,4 +10,4 @@ class ReservaAPIView(APIView):
         reservas = Reserva.objects.all()
         #Convertimos de Django a JSON
         reservas_serializer = ReservaSerializer(reservas , many = True)
-        return Response(reservas_serializer.data, )
+        return Response(reservas_serializer.data)
